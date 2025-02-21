@@ -23,11 +23,25 @@
 /* Begin PBXFileReference section */
 		B01EB4AE2D681E2500859916 /* SharedAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01EB4B82D681E2500859916 /* SharedAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0FFEDB02D690CA70058D1C0 /* SharedAPI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SharedAPI.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B0FFEDB12D690D1B0058D1C0 /* Exceptions for "SharedAPI" folder in "SharedAPI" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			publicHeaders = (
+				Header/SharedAPI.h,
+			);
+			target = B01EB4AD2D681E2500859916 /* SharedAPI */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B01EB4B02D681E2500859916 /* SharedAPI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B0FFEDB12D690D1B0058D1C0 /* Exceptions for "SharedAPI" folder in "SharedAPI" target */,
+			);
 			path = SharedAPI;
 			sourceTree = "<group>";
 		};
@@ -60,9 +74,10 @@
 		B01EB4A42D681E2500859916 = {
 			isa = PBXGroup;
 			children = (
-				B01EB4B02D681E2500859916 /* SharedAPI */,
-				B01EB4BC2D681E2500859916 /* SharedAPITests */,
 				B01EB4AF2D681E2500859916 /* Products */,
+				B01EB4B02D681E2500859916 /* SharedAPI */,
+				B0FFEDB02D690CA70058D1C0 /* SharedAPI.xctestplan */,
+				B01EB4BC2D681E2500859916 /* SharedAPITests */,
 			);
 			sourceTree = "<group>";
 		};

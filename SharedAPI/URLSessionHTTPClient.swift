@@ -13,7 +13,7 @@ public protocol URLSessionProtocol {
 
 extension URLSession: URLSessionProtocol {}
 
-public final class URLSessionHTTPClient: HTTPClientProtocol {
+public final class URLSessionHTTPClient: HTTPClient {
     private let session: URLSessionProtocol
     
     public init(session: URLSessionProtocol) {

@@ -93,7 +93,7 @@ class URLSessionHTTPClientTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT(data: Data?, response: URLResponse?, error: Error?, file: StaticString = #file, line: UInt = #line) -> HTTPClientProtocol {
+    private func makeSUT(data: Data?, response: URLResponse?, error: Error?, file: StaticString = #file, line: UInt = #line) -> HTTPClient {
         
         let mockSession = MockURLSession(mockData: data, mockResponse: response, mockError: error)
         

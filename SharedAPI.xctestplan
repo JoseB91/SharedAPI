@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "9A3F74F4-2876-4008-8AC8-79FC7E73A46B",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:SharedAPI.xcodeproj",
+          "identifier" : "B01EB4AD2D681E2500859916",
+          "name" : "SharedAPI"
+        }
+      ]
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:SharedAPI.xcodeproj",
+        "identifier" : "B01EB4B72D681E2500859916",
+        "name" : "SharedAPITests"
+      }
+    }
+  ],
+  "version" : 1
+}
