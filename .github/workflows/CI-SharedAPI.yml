@@ -32,9 +32,9 @@ jobs:
         with:
           xcode-version: latest
 
-      - name: Install iOS 17.5 Simulator Runtime
+      - name: Install xcode-install and iOS Simulator Runtime
         run: |
-          brew install xcversion
+          brew install xcode-install
           sudo xcversion simulators --install="iOS 18.2"
 
       - name: Build and Test
