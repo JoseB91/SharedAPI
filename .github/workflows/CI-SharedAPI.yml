@@ -38,7 +38,7 @@ jobs:
           -project SharedAPI.xcodeproj \
           -scheme SharedAPI \
           -sdk iphonesimulator \
-          -destination "platform=iOS Simulator,name=iPhone 16 Pro,OS=18.2" ONLY_ACTIVE_ARCH=YES \
+          -destination "platform=iOS Simulator,name=iPhone 16 Pro,OS=17.5" ONLY_ACTIVE_ARCH=YES \
           CODE_SIGNING_ALLOWED=NO
 
       - name: Capture Detailed Logs
