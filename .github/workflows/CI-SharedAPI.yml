@@ -18,10 +18,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: List available Xcode versions
-        run: |
-          xcode-select -p
-          xcodebuild -version
+#      - name: List available Xcode versions
+#        run: |
+#          xcode-select -p
+#          xcodebuild -version
 
       - name: List available simulators
         run: |
