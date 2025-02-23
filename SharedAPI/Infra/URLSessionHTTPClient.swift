@@ -8,10 +8,15 @@
 import Foundation
 
 public protocol URLSessionProtocol {
-    func data(from url: URL, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse)
+    func data(url: URL, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse)
 }
 
-extension URLSession: URLSessionProtocol {}
+extension URLSession: URLSessionProtocol {
+    public func data(url: URL, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse) {
+        try await data(from: url, delegate: delegate)
+    }
+    
+}
 
 public final class URLSessionHTTPClient: HTTPClient {
     private let session: URLSessionProtocol
@@ -21,7 +26,9 @@ public final class URLSessionHTTPClient: HTTPClient {
     }
             
     public func get(from url: URL) async throws -> (Data, HTTPURLResponse) {
-        let (data, response) = try await session.data(from: url, delegate: nil)
+        guard let (data, response) = try? await session.data(url: url, delegate: nil) else {
+            throw URLError(.cannotLoadFromNetwork)
+        }
         
         guard let httpResponse = response as? HTTPURLResponse else {
             throw URLError(.badServerResponse)
@@ -30,4 +37,3 @@ public final class URLSessionHTTPClient: HTTPClient {
         return (data, httpResponse)
     }
 }
-

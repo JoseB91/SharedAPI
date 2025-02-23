@@ -9,29 +9,34 @@ import XCTest
 import SharedAPI
 
 class URLSessionHTTPClientTests: XCTestCase {
-    
+        
     func test_getFromURL_failsWithError_havingError() async throws {
         // Arrange
         let url = anyURL()
+        let (sut, _) = makeSUT(result: .failure(anyNSError()))
         
-        //Act
         do {
-            _ = try await makeSUT(data: nil, response: nil, error: anyNSError()).get(from: url)
+            //Act
+            _ = try await sut.get(from: url)
             //Assert
             XCTFail("Expected error, but the call succeeded.")
+        } catch let error as URLError {
+            //Assert
+            XCTAssertEqual(error.code, .cannotLoadFromNetwork)
         } catch {
             //Assert
-            XCTAssertNotNil(error)
+            XCTFail("Expected URLError, but received: \(error)")
         }
     }
     
     func test_getFromURL_failsWithBadServerResponse_havingNonHTTPURLResponse() async throws {
         // Arrange
         let url = anyURL()
+        let (sut, _) = makeSUT(result: .success((anyData(), nonHTTPURLResponse())))
         
-        //Act
         do {
-            _ = try await makeSUT(data: anyData(), response: nonHTTPURLResponse(), error: nil).get(from: url)
+            //Act
+            _ = try await sut.get(from: url)
             //Assert
             XCTFail("Expected error, but the call succeeded.")
         } catch let error as URLError {
@@ -42,33 +47,16 @@ class URLSessionHTTPClientTests: XCTestCase {
             XCTFail("Expected URLError, but received: \(error)")
         }
     }
-    
-    func test_getFromURL_failsWithError_havingErrorAndNonHTTPURLResponse() async throws {
-        // Arrange
-        let url = anyURL()
-        
-        //Act
-        do {
-            _ = try await makeSUT(data: anyData(), response: nonHTTPURLResponse(), error: anyNSError()).get(from: url)
-            //Assert
-            XCTFail("Expected error, but the call succeeded.")
-        } catch let error as URLError {
-            //Assert
-            XCTFail("Expected another error, but received: \(error)")
-        } catch {
-            //Assert
-            XCTAssertNotNil(error)
-        }
-    }
-    
+
     func test_getFromURL_succeedsWithData_havingDataAndAnyHTTPURLResponse() async throws {
         // Arrange
         let url = anyURL()
         let mockedData = anyData()
         let mockedResponse = anyHTTPURLResponse()
-        
+        let (sut, _) = makeSUT(result: .success((mockedData, mockedResponse)))
+
         // Act
-        let (expectedData, expectedResponse) = try await makeSUT(data: mockedData, response: mockedResponse, error: nil).get(from: url)
+        let (expectedData, expectedResponse) = try await sut.get(from: url)
         
         // Assert
         XCTAssertEqual(expectedData, mockedData)
@@ -81,9 +69,10 @@ class URLSessionHTTPClientTests: XCTestCase {
         let url = anyURL()
         let emptyData = Data()
         let mockedResponse = anyHTTPURLResponse()
+        let (sut, _) = makeSUT(result: .success((emptyData, mockedResponse)))
         
         // Act
-        let (expectedData, expectedResponse) = try await makeSUT(data: emptyData, response: mockedResponse, error: nil).get(from: url)
+        let (expectedData, expectedResponse) = try await sut.get(from: url)
         
         // Assert
         XCTAssertEqual(expectedData, emptyData)
@@ -93,13 +82,14 @@ class URLSessionHTTPClientTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT(data: Data?, response: URLResponse?, error: Error?, file: StaticString = #file, line: UInt = #line) -> HTTPClient {
-        
-        let mockSession = MockURLSession(mockData: data, mockResponse: response, mockError: error)
-        
-        let sut = URLSessionHTTPClient(session: mockSession)
+    private func makeSUT(
+        result: Result<(Data, URLResponse), Error>,
+        file: StaticString = #file, line: UInt = #line
+    ) -> (sut: URLSessionHTTPClient, sessionSpy: URLSessionSpy) {
+        let sessionSpy = URLSessionSpy(result: result)
+        let sut = URLSessionHTTPClient(session: sessionSpy)
         trackForMemoryLeaks(sut, file: file, line: line)
-        return sut
+        return (sut, sessionSpy)
     }
     
     private func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #filePath, line: UInt = #line) {
