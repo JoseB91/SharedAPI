@@ -1,5 +1,5 @@
 //
-//  LigasEcAPITests.swift
+//  LeagueMapperTests.swift
 //  LigasEcAPITests
 //
 //  Created by José Briones on 23/2/25.
@@ -8,7 +8,7 @@
 import XCTest
 import LigasEcAPI
 
-final class LigasEcAPITests: XCTestCase {
+final class LeagueMapperTests: XCTestCase {
 
     func test_map_throwsErrorOnNon200HTTPResponse() throws {
         // Arrange
