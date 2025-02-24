@@ -18,7 +18,7 @@
                BlueprintIdentifier = "B01EB4AD2D681E2500859916"
                BuildableName = "SharedAPI.framework"
                BlueprintName = "SharedAPI"
-               ReferencedContainer = "container:SharedAPI.xcodeproj">
+               ReferencedContainer = "container:LigasEcAPI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,13 +27,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
-      <TestPlans>
-         <TestPlanReference
-            reference = "container:SharedAPI.xctestplan"
-            default = "YES">
-         </TestPlanReference>
-      </TestPlans>
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -58,7 +53,7 @@
             BlueprintIdentifier = "B01EB4AD2D681E2500859916"
             BuildableName = "SharedAPI.framework"
             BlueprintName = "SharedAPI"
-            ReferencedContainer = "container:SharedAPI.xcodeproj">
+            ReferencedContainer = "container:LigasEcAPI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

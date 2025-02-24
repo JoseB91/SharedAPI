@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B00CDFE72D6C150C00050613 /* LigasEcAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00CDFDD2D6C150C00050613 /* LigasEcAPI.framework */; };
+		B00CDFF82D6C151D00050613 /* LigasEcAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = B00CDFF62D6C151D00050613 /* LigasEcAPI.docc */; };
+		B00CDFF92D6C151D00050613 /* LigasEcAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = B00CDFF52D6C151D00050613 /* LigasEcAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B00CE1452D6C156500050613 /* LeagueMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00CE1442D6C156500050613 /* LeagueMapper.swift */; };
 		B01EB4B92D681E2500859916 /* SharedAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01EB4AE2D681E2500859916 /* SharedAPI.framework */; };
 		B0FFEDB92D690E110058D1C0 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FFEDB52D690E110058D1C0 /* HTTPClient.swift */; };
 		B0FFEDBA2D690E110058D1C0 /* SharedAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = B0FFEDB62D690E110058D1C0 /* SharedAPI.docc */; };
@@ -15,6 +19,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B00CDFE82D6C150C00050613 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B01EB4A52D681E2500859916 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B00CDFDC2D6C150C00050613;
+			remoteInfo = LigasEcAPI;
+		};
 		B01EB4BA2D681E2500859916 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B01EB4A52D681E2500859916 /* Project object */;
@@ -25,6 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B00CDFDD2D6C150C00050613 /* LigasEcAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LigasEcAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00CDFE62D6C150C00050613 /* LigasEcAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LigasEcAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00CDFF52D6C151D00050613 /* LigasEcAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LigasEcAPI.h; sourceTree = "<group>"; };
+		B00CDFF62D6C151D00050613 /* LigasEcAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LigasEcAPI.docc; sourceTree = "<group>"; };
+		B00CE1442D6C156500050613 /* LeagueMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueMapper.swift; sourceTree = "<group>"; };
 		B01EB4AE2D681E2500859916 /* SharedAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01EB4B82D681E2500859916 /* SharedAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FFEDB02D690CA70058D1C0 /* SharedAPI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SharedAPI.xctestplan; sourceTree = "<group>"; };
@@ -34,15 +50,48 @@
 		B0FFEDB72D690E110058D1C0 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B00CE1492D6C209E00050613 /* Exceptions for "SharedAPITests" folder in "LigasEcAPITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Helpers/SharedTestHelpers.swift,
+			);
+			target = B00CDFE52D6C150C00050613 /* LigasEcAPITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		B00CDFEA2D6C150C00050613 /* LigasEcAPITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LigasEcAPITests;
+			sourceTree = "<group>";
+		};
 		B01EB4BC2D681E2500859916 /* SharedAPITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B00CE1492D6C209E00050613 /* Exceptions for "SharedAPITests" folder in "LigasEcAPITests" target */,
+			);
 			path = SharedAPITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B00CDFDA2D6C150C00050613 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00CDFE32D6C150C00050613 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00CDFE72D6C150C00050613 /* LigasEcAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B01EB4AB2D681E2500859916 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,9 +110,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B00CDFF72D6C151D00050613 /* LigasEcAPI */ = {
+			isa = PBXGroup;
+			children = (
+				B00CDFFA2D6C152400050613 /* Header & Doc */,
+				B00CE1442D6C156500050613 /* LeagueMapper.swift */,
+			);
+			path = LigasEcAPI;
+			sourceTree = "<group>";
+		};
+		B00CDFFA2D6C152400050613 /* Header & Doc */ = {
+			isa = PBXGroup;
+			children = (
+				B00CDFF52D6C151D00050613 /* LigasEcAPI.h */,
+				B00CDFF62D6C151D00050613 /* LigasEcAPI.docc */,
+			);
+			path = "Header & Doc";
+			sourceTree = "<group>";
+		};
 		B01EB4A42D681E2500859916 = {
 			isa = PBXGroup;
 			children = (
+				B00CDFF72D6C151D00050613 /* LigasEcAPI */,
+				B00CDFEA2D6C150C00050613 /* LigasEcAPITests */,
 				B01EB4AF2D681E2500859916 /* Products */,
 				B0FFEDB82D690E110058D1C0 /* SharedAPI */,
 				B0FFEDB02D690CA70058D1C0 /* SharedAPI.xctestplan */,
@@ -76,6 +145,8 @@
 			children = (
 				B01EB4AE2D681E2500859916 /* SharedAPI.framework */,
 				B01EB4B82D681E2500859916 /* SharedAPITests.xctest */,
+				B00CDFDD2D6C150C00050613 /* LigasEcAPI.framework */,
+				B00CDFE62D6C150C00050613 /* LigasEcAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +181,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		B00CDFD82D6C150C00050613 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00CDFF92D6C151D00050613 /* LigasEcAPI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B01EB4A92D681E2500859916 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,6 +200,49 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		B00CDFDC2D6C150C00050613 /* LigasEcAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00CDFF32D6C150C00050613 /* Build configuration list for PBXNativeTarget "LigasEcAPI" */;
+			buildPhases = (
+				B00CDFD82D6C150C00050613 /* Headers */,
+				B00CDFD92D6C150C00050613 /* Sources */,
+				B00CDFDA2D6C150C00050613 /* Frameworks */,
+				B00CDFDB2D6C150C00050613 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LigasEcAPI;
+			packageProductDependencies = (
+			);
+			productName = LigasEcAPI;
+			productReference = B00CDFDD2D6C150C00050613 /* LigasEcAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B00CDFE52D6C150C00050613 /* LigasEcAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00CDFF42D6C150C00050613 /* Build configuration list for PBXNativeTarget "LigasEcAPITests" */;
+			buildPhases = (
+				B00CDFE22D6C150C00050613 /* Sources */,
+				B00CDFE32D6C150C00050613 /* Frameworks */,
+				B00CDFE42D6C150C00050613 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B00CDFE92D6C150C00050613 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B00CDFEA2D6C150C00050613 /* LigasEcAPITests */,
+			);
+			name = LigasEcAPITests;
+			packageProductDependencies = (
+			);
+			productName = LigasEcAPITests;
+			productReference = B00CDFE62D6C150C00050613 /* LigasEcAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B01EB4AD2D681E2500859916 /* SharedAPI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B01EB4C12D681E2500859916 /* Build configuration list for PBXNativeTarget "SharedAPI" */;
@@ -174,6 +296,12 @@
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					B00CDFDC2D6C150C00050613 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					B00CDFE52D6C150C00050613 = {
+						CreatedOnToolsVersion = 16.2;
+					};
 					B01EB4AD2D681E2500859916 = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -182,7 +310,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B01EB4A82D681E2500859916 /* Build configuration list for PBXProject "SharedAPI" */;
+			buildConfigurationList = B01EB4A82D681E2500859916 /* Build configuration list for PBXProject "LigasEcAPI" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -198,11 +326,27 @@
 			targets = (
 				B01EB4AD2D681E2500859916 /* SharedAPI */,
 				B01EB4B72D681E2500859916 /* SharedAPITests */,
+				B00CDFDC2D6C150C00050613 /* LigasEcAPI */,
+				B00CDFE52D6C150C00050613 /* LigasEcAPITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B00CDFDB2D6C150C00050613 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00CDFE42D6C150C00050613 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B01EB4AC2D681E2500859916 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +364,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B00CDFD92D6C150C00050613 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00CDFF82D6C151D00050613 /* LigasEcAPI.docc in Sources */,
+				B00CE1452D6C156500050613 /* LeagueMapper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00CDFE22D6C150C00050613 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B01EB4AA2D681E2500859916 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,6 +400,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B00CDFE92D6C150C00050613 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B00CDFDC2D6C150C00050613 /* LigasEcAPI */;
+			targetProxy = B00CDFE82D6C150C00050613 /* PBXContainerItemProxy */;
+		};
 		B01EB4BB2D681E2500859916 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B01EB4AD2D681E2500859916 /* SharedAPI */;
@@ -248,6 +413,108 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		B00CDFEE2D6C150C00050613 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9V3336X7NB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joseb91.LigasEcAPI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B00CDFEF2D6C150C00050613 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9V3336X7NB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joseb91.LigasEcAPI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B00CDFF02D6C150C00050613 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9V3336X7NB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joseb91.LigasEcAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B00CDFF12D6C150C00050613 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9V3336X7NB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joseb91.LigasEcAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		B01EB4C22D681E2500859916 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -494,7 +761,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B01EB4A82D681E2500859916 /* Build configuration list for PBXProject "SharedAPI" */ = {
+		B00CDFF32D6C150C00050613 /* Build configuration list for PBXNativeTarget "LigasEcAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00CDFEE2D6C150C00050613 /* Debug */,
+				B00CDFEF2D6C150C00050613 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B00CDFF42D6C150C00050613 /* Build configuration list for PBXNativeTarget "LigasEcAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00CDFF02D6C150C00050613 /* Debug */,
+				B00CDFF12D6C150C00050613 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B01EB4A82D681E2500859916 /* Build configuration list for PBXProject "LigasEcAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B01EB4C42D681E2500859916 /* Debug */,

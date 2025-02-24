@@ -15,7 +15,6 @@ extension URLSession: URLSessionProtocol {
     public func data(url: URL, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse) {
         try await data(from: url, delegate: delegate)
     }
-    
 }
 
 public final class URLSessionHTTPClient: HTTPClient {

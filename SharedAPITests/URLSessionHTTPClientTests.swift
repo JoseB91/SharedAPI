@@ -79,7 +79,7 @@ class URLSessionHTTPClientTests: XCTestCase {
         XCTAssertEqual(expectedResponse.url, url)
         XCTAssertEqual(expectedResponse.statusCode, mockedResponse.statusCode)
     }
-    
+        
     // MARK: - Helpers
     
     private func makeSUT(
@@ -98,9 +98,7 @@ class URLSessionHTTPClientTests: XCTestCase {
         }
     }
     
-    func anyURL() -> URL {
-        return URL(string: "http://any-url.com")!
-    }
+
     
     func anyData() -> Data {
         return Data("any data".utf8)
