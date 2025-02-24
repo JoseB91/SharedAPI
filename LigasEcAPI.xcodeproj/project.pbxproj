@@ -18,6 +18,7 @@
 		B00CE15B2D6C260A00050613 /* URLSessionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00CE1562D6C260A00050613 /* URLSessionSpy.swift */; };
 		B00CE15C2D6C260A00050613 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00CE1582D6C260A00050613 /* URLSessionHTTPClientTests.swift */; };
 		B00CE15D2D6C260A00050613 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00CE1552D6C260A00050613 /* SharedTestHelpers.swift */; };
+		B00CE1862D6CC58C00050613 /* SharedAPI.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = B00CE1852D6CC58C00050613 /* SharedAPI.xctestplan */; };
 		B01EB4B92D681E2500859916 /* SharedAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01EB4AE2D681E2500859916 /* SharedAPI.framework */; };
 		B0FFEDB92D690E110058D1C0 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FFEDB52D690E110058D1C0 /* HTTPClient.swift */; };
 		B0FFEDBA2D690E110058D1C0 /* SharedAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = B0FFEDB62D690E110058D1C0 /* SharedAPI.docc */; };
@@ -54,9 +55,11 @@
 		B00CE1552D6C260A00050613 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		B00CE1562D6C260A00050613 /* URLSessionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionSpy.swift; sourceTree = "<group>"; };
 		B00CE1582D6C260A00050613 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
+		B00CE1842D6CC53D00050613 /* LigasEcAPI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = LigasEcAPI.xctestplan; path = LigasEcAPITests/LigasEcAPI.xctestplan; sourceTree = "<group>"; };
+		B00CE1852D6CC58C00050613 /* SharedAPI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SharedAPI.xctestplan; sourceTree = "<group>"; };
+		B00CE1872D6CC61D00050613 /* SharedAPI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = SharedAPI.xctestplan; path = SharedAPITests/SharedAPI.xctestplan; sourceTree = "<group>"; };
 		B01EB4AE2D681E2500859916 /* SharedAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01EB4B82D681E2500859916 /* SharedAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0FFEDB02D690CA70058D1C0 /* SharedAPI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SharedAPI.xctestplan; sourceTree = "<group>"; };
 		B0FFEDB32D690E110058D1C0 /* SharedAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedAPI.h; sourceTree = "<group>"; };
 		B0FFEDB52D690E110058D1C0 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		B0FFEDB62D690E110058D1C0 /* SharedAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SharedAPI.docc; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 		B00CE1592D6C260A00050613 /* SharedAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				B00CE1852D6CC58C00050613 /* SharedAPI.xctestplan */,
 				B00CE1572D6C260A00050613 /* Helpers */,
 				B00CE1582D6C260A00050613 /* URLSessionHTTPClientTests.swift */,
 			);
@@ -146,11 +150,12 @@
 		B01EB4A42D681E2500859916 = {
 			isa = PBXGroup;
 			children = (
+				B00CE1872D6CC61D00050613 /* SharedAPI.xctestplan */,
+				B00CE1842D6CC53D00050613 /* LigasEcAPI.xctestplan */,
 				B00CDFF72D6C151D00050613 /* LigasEcAPI */,
 				B00CE1522D6C260200050613 /* LigasEcAPITests */,
 				B01EB4AF2D681E2500859916 /* Products */,
 				B0FFEDB82D690E110058D1C0 /* SharedAPI */,
-				B0FFEDB02D690CA70058D1C0 /* SharedAPI.xctestplan */,
 				B00CE1592D6C260A00050613 /* SharedAPITests */,
 			);
 			sourceTree = "<group>";
@@ -367,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B00CE1862D6CC58C00050613 /* SharedAPI.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "9A3F74F4-2876-4008-8AC8-79FC7E73A46B",
+      "id" : "99B0D3B6-E7AA-4344-92F3-18AEDF259341",
       "name" : "Test Scheme Action",
       "options" : {
 
@@ -12,7 +12,7 @@
     "codeCoverage" : {
       "targets" : [
         {
-          "containerPath" : "container:SharedAPI.xcodeproj",
+          "containerPath" : "container:LigasEcAPI.xcodeproj",
           "identifier" : "B01EB4AD2D681E2500859916",
           "name" : "SharedAPI"
         }
@@ -23,7 +23,7 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:SharedAPI.xcodeproj",
+        "containerPath" : "container:LigasEcAPI.xcodeproj",
         "identifier" : "B01EB4B72D681E2500859916",
         "name" : "SharedAPITests"
       }

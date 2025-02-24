@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B01EB4AD2D681E2500859916"
-               BuildableName = "SharedAPI.framework"
-               BlueprintName = "SharedAPI"
+               BlueprintIdentifier = "B00CDFDC2D6C150C00050613"
+               BuildableName = "LigasEcAPI.framework"
+               BlueprintName = "LigasEcAPI"
                ReferencedContainer = "container:LigasEcAPI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -30,10 +30,22 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:SharedAPITests/SharedAPI.xctestplan"
+            reference = "container:LigasEcAPITests/LigasEcAPI.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B00CDFE52D6C150C00050613"
+               BuildableName = "LigasEcAPITests.xctest"
+               BlueprintName = "LigasEcAPITests"
+               ReferencedContainer = "container:LigasEcAPI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -55,9 +67,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B01EB4AD2D681E2500859916"
-            BuildableName = "SharedAPI.framework"
-            BlueprintName = "SharedAPI"
+            BlueprintIdentifier = "B00CDFDC2D6C150C00050613"
+            BuildableName = "LigasEcAPI.framework"
+            BlueprintName = "LigasEcAPI"
             ReferencedContainer = "container:LigasEcAPI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

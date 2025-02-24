@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "D9183E90-98AF-4B2C-AF1D-CCAA92F17965",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:LigasEcAPI.xcodeproj",
+          "identifier" : "B00CDFDC2D6C150C00050613",
+          "name" : "LigasEcAPI"
+        }
+      ]
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:LigasEcAPI.xcodeproj",
+        "identifier" : "B00CDFE52D6C150C00050613",
+        "name" : "LigasEcAPITests"
+      }
+    }
+  ],
+  "version" : 1
+}
